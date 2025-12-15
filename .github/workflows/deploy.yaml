@@ -7,7 +7,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: piotrmx3/cloudApp
+  IMAGE_NAME: piotrmx3/cloudapp
 
 jobs:
   # 1: Build and Test
