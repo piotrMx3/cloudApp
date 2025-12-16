@@ -72,13 +72,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Multiple commands
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Reload Image
         uses: appleboy/ssh-action@v1
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.KEY }}
           port: ${{ secrets.PORT }}
-          script: |
-            whoami
-            ls -al
+          script_path: scripts/deploy.sh
